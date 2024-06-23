@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  background-color: rgb(255, 255, 255);
+}
+
+.img1 svg {
+  height: 90%;
+  width: 90%;
+  position: relative;
+}
+
+
+
+.nav-container {
+
+  background-color: rgb(0, 0, 0);
+  color: white;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  min-width: 600px;
+}
+
+.enq {
+  cursor: pointer;
+  color: white;
+  margin-right: 26px;
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.enq::after {
+  content: '';
+  width: 0px;
+  height: 1.5px;
+  display: block;
+  background: goldenrod;
+  transform: scale(0, 1);
+  transition: transform 0.3s ease;
+}
+
+.enq:hover::after {
+  width: 100%;
+  transform: scale(1, 1);
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #000000;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.dropbtn::after {
+  content: '';
+  width: 0px;
+  height: 1.5px;
+  display: block;
+  background: goldenrod;
+  transform: scale(0, 1);
+  transition: transform 0.3s ease;
+}
+
+.dropbtn:hover::after {
+  color: goldenrod;
+  width: 100%;
+  transform: scale(1, 1);
+}
+
+
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #181818;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #2c2c2c;
+  color: goldenrod;
+
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* Horizontal Cards */
+.horizontal-card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.horizontal-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 10px 10px 10px 10px rgba(50, 50, 50, 0.348) ;
+}
+
+.img-text{
+position: absolute;
+top: 80%;
+left: 50%;
+transform: translate(-50%,-50%);
+font-size: 20px;
+color: #fff;
+font-weight: 700;
+text-align: center;
+border: 1px solid white;
+padding: 5px;
+/* backdrop-filter: blur(2px); */
+background-color: transparent;
+border-radius: 10px;
+
+}
+
+
+.card-img-section {
+   /* flex: 0 0 40%; */
+  /* overflow: hidden; */
+  width: 800px;
+  position: relative;
+
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.nav-container svg {
+  margin-left: 20px;
+
+}
+
+.menubtn {
+  right: 17px;
+  position: fixed;
+  display: none;
+}
+
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: -210px;
+  /* width: 250px; */
+  height: 100vh;
+  background-color: rgba(161, 153, 153, 0.294);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 20px;
+  z-index: 20;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+
+.sidebar .enq {
+  background-color: rgba(136, 136, 136, 0.418);
+  padding: 10px;
+  color: #000000;
+  margin: 20px;
+  margin-top: 35px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.sidebar .dropbtn {
+  background-color: rgba(166, 166, 166, 0.418);
+  padding: 10px;
+  color: #000000;
+  margin: 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.sidebar .dropdown-content {
+  margin-left: 10px;
+  background-color: rgba(166, 166, 166, 0.418);
+  border-radius: 10px;
+}
+
+.img1 img{
+  height: 100%;
+  width: 100%;
+
+}
+
+
+@media (max-width: 1000px) {
+  .img1 img{
+    height: auto;
+    width: 35%;
+    margin-top: 0;
+    margin-right: 502px;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .img1 img{
+    height: auto;
+    width: 30%;
+  }
+}
+
+@media (max-width: 500px) {
+  .img1 img{
+    height: 26%;
+        width: 26%;
+        margin-top: 0;
+        margin-right: 283px;
+  }
+}
+
+
+@media (max-width: 300px) {
+  .img1 img{
+    height: 26%;
+        width: 26%;
+        margin-top: 0;
+        margin-right: 283px;
+  }
+}
+
+@media(max-width: 1000px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menubtn{
+    display: flex;
+  }
+
+  @media(max-width: 800px) {
+    .sidebar{
+      width: 100%;
+    }
+  }
+
+  @media(max-width: 500px) {
+    .sidebar{
+      width: 100%;
+    }
+  }
+
+}
+
+
+
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #000000;
+  color: white;
+  padding: 20px 50px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h2 {
+  margin-top: 0;
+  font-size:medium;
+}
+
+.footer-section a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: small;
+ 
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+  /* margin-top: 10px; */
+}
+
+.footer-bottom p {
+  margin: 0;
+  display: flex;
+  color: #8f8f8fe5;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+.footer-section .social a {
+  margin: 0 10px;
+  color: white;
+  font-size: 20px;
+}
+
+
+
+hr{
+  margin: 0;
+  
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: left;
+  }
+}
+
+
+
+
+
+
